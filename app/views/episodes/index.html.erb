@@ -1,0 +1,11 @@
+<h1>Episodes</h1>
+
+<ul id="episodes">
+	<% @episodes.each do |episode| %>
+		<li>
+			<%= link_to episode.title, episode_path(episode), class: 'episode_title', id: "episode_#{episode.id}" %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "Create a New Episode", new_episode_path, class: "new_apisode" %>
