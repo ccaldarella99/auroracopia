@@ -2,4 +2,12 @@
 
 <%= @episode.body %>
 
+<br>
+<br>
+<%= link_to "Edit", edit_episode_path(@episode) %>
+<br>
+<br>
+<%= link_to "Delete", episode_path(@episode), method: :destroy, data: {confirm: "Really delete this Post?\nIt will be unrecoverable if you proceed."} %>
+<br>
+<br>
 <%= link_to "Back to Episodes List", episodes_path %>
