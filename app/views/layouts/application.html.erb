@@ -9,7 +9,32 @@
   </head>
 
   <body>
+  			<div id="header">
+			<div id="header-left">
+				<%= image_tag "logo.png", width: 260, alt: "sun-logo", id: "header-logo" %>
+			</div>
+			<div id="header-right">
+				<div id="nav-right-top">
+					<div class="menu-item">
+						<a class="menu-color" href="#">HOME</a>
+					</div>
+					<div class="menu-item">
+						<a class="menu-color" onmouseover="showNavMenu()" onmouseleave="hideNavMenu()" href="#">ABOUT</a>
+					</div>
+				</div>
+				<div id="nav-right-bottom" class="hide-nav">
+					<div><a class="nav-menu-item menu-color" href="#">YOUR HOSTS</a></div>
+					<div><a class="nav-menu-item menu-color" href="#">EPISODES</a></div>
+					<div><a class="nav-menu-item menu-color" href="#">CONTACT</a></div>
+				</div>
+			</div>
+		</div>
+
+  	
   	<p class="flash"><%= flash.notice %></p>
-    <%= yield %>
+    <div id="section">
+	<%= yield %>
+	</div>
+	
   </body>
 </html>
